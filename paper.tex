@@ -21,19 +21,18 @@ Diese Bachelorarbeit baut auf das oben genannte Paper “Evaluating Cross-Platfo
 \begin{itemize}
     \item Web Apps sind Anwendungen, die vollständig im Browser des Smartphones laufen. Sie sind größtenteils mit JavaScript, HTML, CSS und zusätzlichse Web Frameworks entwickelt und unterscheiden sich heutzutage von responsiven Webseiten unwesentlich~\cite{eva12}.
     Beispielhafte Frameworks sind jQuery Mobile~\cite{jquery} oder das mittlerweile in Sencha Ext JS integrierte Sencha Touch~\cite{sencha}.
-    Auch Progressive Web Apps (PWAs) fallen in diese Kategorie, da sie ausschließlich vom Browser ausgeführt werden.
-    Durch die zahlreichen Anbindungen moderner Browser an Smartphonesensoren wie Kamera oder GPS und die Möglichkeit Push-Benachrichtigungen sowie Offline-Funktionalität durch den Einsatz von Service Workern umzusetzen, haben PWAs große Überschneidungen mit Anwendungen der zweiten Kategorie (hybride Apps)~\cite{pwa}.
     
     \item Hybride Apps bilden die Brücke zwischen nativen Anwendungen und Web Apps. Die Laufzeitumgebung hybrider Apps besteht aus einer für das Layout und Rendering zuständige Browser-Engine, welche für hardwarespezifische Zugriffe in eine native Engine eingebettet ist~\cite{eva12}.
     Mobile Browser sind jedoch in den letzten Jahren zunehmend mächtiger geworden, womit sich auch der Funktionsumfang von reinen Web Apps enorm erweitern lässt~\cite{gdev}.
     Bekannte Beispiele für hybride Lösungen sind PhoneGap oder das Ionic Framework~\cite{phonegap,ionic}.
     
-    \item Apps, die vollständig In sich geschlossene Laufzeitumgebung (self-contained Apps) eigene Engine ... TODO
+    \item Apps, die vollständig eine eigene (Browser unabhängige) Laufzeitumgebung nutzen (self-contained Apps) bilden die dritte Kategorie. Self-contained Apps werden von der jeweiligen Engine des Frameworks verpackt und als native Pakete bereitgestellt~\cite{eva12}. Das Flutter SDK von Google oder auch Titanium sind prominente Vertreter dieser Gruppe~\cite{flutter,tita}.
+    
 \end{itemize}
 Aus jeder dieser Gruppen wählen sie eine der Lösungen als Repräsentant und untersuchen diesen anhand eigens aufgestellter Kriterien. Die Auswahl dieser Kriterien basiert auf Interviews mit Fachexperten, Literaturrecherche, typischen Problemen in Webforen und eigenen Erfahrungen beim Entwickeln prototypischer Apps. Diese Kriterien bilden die Grundlage weiterer Arbeiten wie beispielsweise “A Comparative Analysis of Cross-platform Development Approaches for Mobile Applications” von Xanthopoulos und Xinogalos aus dem Jahr 2013~\cite{compa13}.
 Pro Kriterium wird jeder Ansatz von 1 (Kriterium wurde sehr gut erfüllt) bis 6 (Kriterium wurde gar nicht bzw. sehr schlecht erfüllt) bewertet. Die Bewertung stützt sich sowohl auf aus Interviews gewonnenen Einschätzungen erfahrener Entwickler, als auch Literaturrecherche und praktischen Erfahrungen, die die Autoren beim Arbeiten mit der jeweiligen Technologie selber gesammelt haben.\\ \\
 Die Methodik dieser Bachelorarbeit orientiert sich am Vorgehen der Arbeit von Heitkötter, Hanschke und Majchrzak. Zunächst werden überblicksartig derzeit aktuelle cross-platform Lösungen vorgestellt und jeweils einer der drei oben genannten Gruppen zugeordnet. Anschließend wird aus jeder Gruppe ein Repräsentant ausgewählt und anhand der Kriterien des zugrundeliegenden Papers untersucht. Abschließend werden die Ergebnisse ausgewertet und tabellarisch gegenübergestellt, um die Stärken und Schwächen der jeweiligen Lösung aufzuzeigen und so Entwickler bei der Wahl einer passenden Technologie zu unterstützen.
-
+\\
 \section*{Vorläufige Gliederung}
 
 \begin{enumerate}
