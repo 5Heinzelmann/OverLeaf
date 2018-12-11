@@ -13,7 +13,7 @@ Es gibt bislang sehr wenig Forschung zu aktuellen cross-platform Lösungen. Aber
 
 \section*{Fragestellung}
 
-Wo liegen die Stärken und Schwächen aktueller Lösungen zur Entwicklung mobiler cross-platform Anwendungen?
+Wo liegen die Stärken und Schwächen aktueller Lösungen zur Implementation mobiler cross-platform Anwendungen aus Entwicklersicht?
 
 \section*{Methodik}
 
@@ -29,9 +29,24 @@ Diese Bachelorarbeit baut auf das oben genannte Paper “Evaluating Cross-Platfo
     \item Apps, die vollständig eine eigene (Browser unabhängige) Laufzeitumgebung nutzen (self-contained Apps) bilden die dritte Kategorie. Self-contained Apps werden von der jeweiligen Engine des Frameworks verpackt und als native Pakete bereitgestellt~\cite{eva12}. Das Flutter SDK von Google oder auch Titanium sind prominente Vertreter dieser Gruppe~\cite{flutter,tita}.
     
 \end{itemize}
-Aus jeder dieser Gruppen wählen die Autoren des Papers eine der Lösungen als Repräsentant und untersuchen diesen anhand eigens aufgestellter Kriterien. Die Auswahl dieser Kriterien basiert auf Interviews mit Fachexperten, Literaturrecherche, typischen Problemen in Webforen und eigenen Erfahrungen beim Entwickeln prototypischer Apps. Diese Kriterien bilden die Grundlage weiterer Arbeiten wie beispielsweise “A Comparative Analysis of Cross-platform Development Approaches for Mobile Applications” von Xanthopoulos und Xinogalos aus dem Jahr 2013~\cite{compa13}.
+Aus jeder dieser Gruppen wählen die Autoren des Papers eine der Lösungen als Repräsentant und untersuchen diesen anhand 14 eigens aufgestellter Qualitätsmerkmale. Sie unterteilen die Attribute in Infrastruktur- und Entwicklersicht. Zu den 7 Infrastrukturkriterien zählen sie beispielsweise, ob das Tool kostenlos zur Verfügung steht oder kommerziell erworben werden muss, aber auch, auf wie viele Schnittstellen zur Nutzung nativer, hardwarespezifischer Funktionen (GPS, Kamera usw.) zugegriffen werden kann.
+Die 7 Entwickler bezogenen Vergleichskriterien sind:
+\begin{itemize}
+    \item \textbf{Entwicklungsumgebung:} Bewertet die Technologie anhand der Unterstützung der Entwicklungsumgebung beim Implementieren durch Debugger, Emulatoren und Features wie Autovervollständigung oder automatisiertes Testen.
+    \item \textbf{GUI Design}: Dieses Kriterium umfasst den Prozess der Erstellung der grafischen Benutzeroberfläche (GUI). Als vorteilhaft wird dabei das automatische Aktualisieren der Oberfläche (hot reload) erachtet, sowie die Möglichkeit mit einem separaten WYSIWYG-Editor arbeiten zu können.
+    \item \textbf{Entwicklerfreundlichkeit:} Beschreibt die Qualität der Dokumentation des Tools. Dieses Kriterium ist gut erfüllt, wenn Codebeispiele, Links zu ähnlichen Problemen, Benutzerkommentare usw. zur Verfügung stehen.
+    \item \textbf{Wartbarkeit:} Wird anhand der Lines of Code (LOC) ermittelt. Die Wahl dieses Indikators basiert auf der Annahme, dass eine Anwendung leichter zu warten ist, wenn sie weniger LOC hat, weil dadurch z.B. die Schulung neuer Entwickler beschleunigt wird.
+    \item \textbf{Modularisierung:} Beeinflusst, wie gut Projekte auf mehrere Entwickler aufgeteilt werden können, um parallel zu arbeiten.
+    \item \textbf{Übertragbarkeit:} Bestimmt die Wiederverwendbarkeit des Quellcodes bei einem Umzug des Projekts über verschiedene cross-platform Ansätze hinweg.
+    \item \textbf{Geschwindigkeit und Aufwand beim Entwickeln:} Bewertet die Geschwindigkeit des Entwicklungsprozesses und Faktoren, die eine schnelle und unkomplizierte Entwicklung behindern.
+\end{itemize}
+Die Auswahl aller 14 Qualitätsmerkmale basiert auf Interviews mit Fachexperten, Literaturrecherche, typischen Problemen in Webforen und eigenen Erfahrungen beim Entwickeln prototypischer Apps.
+Diese Kriterien bilden die Grundlage weiterer Arbeiten wie beispielsweise “A Comparative Analysis of Cross-platform Development Approaches for Mobile Applications” von Xanthopoulos und Xinogalos aus dem Jahr 2013~\cite{compa13}.
 Pro Kriterium wird jeder Ansatz von 1 (Kriterium wurde sehr gut erfüllt) bis 6 (Kriterium wurde gar nicht bzw. sehr schlecht erfüllt) bewertet. Die Bewertung stützt sich sowohl auf aus Interviews gewonnenen Einschätzungen erfahrener Entwickler, als auch Literaturrecherche und praktischen Erfahrungen, die die Autoren beim Arbeiten mit der jeweiligen Technologie selber gesammelt haben.\\ \\
-Die Methodik dieser Bachelorarbeit orientiert sich am Vorgehen der Arbeit von Heitkötter, Hanschke und Majchrzak. Zunächst werden überblicksartig derzeit aktuelle cross-platform Lösungen vorgestellt und jeweils einer der drei oben genannten Gruppen zugeordnet. Anschließend wird aus jeder Gruppe ein Repräsentant ausgewählt und anhand der Kriterien des zugrundeliegenden Papers untersucht. Neben Experteninterviews und Eigenrecherche sollen in die Bewertung der Tools zusätzlich Erkenntnisse einfließen, die beim Entwickeln einer prototypischen App mit jeder der drei Technologien gewonnen werden. Abschließend werden die Ergebnisse ausgewertet und tabellarisch gegenübergestellt, um die Stärken und Schwächen der jeweiligen Lösung aufzuzeigen und so Entwickler bei der Wahl einer passenden Technologie zu unterstützen.
+Die Methodik dieser Bachelorarbeit orientiert sich im Wesentlichen am Vorgehen an der Arbeit von Heitkötter, Hanschke und Majchrzak. Zunächst werden überblicksartig derzeit aktuelle cross-platform Lösungen vorgestellt und jeweils einer der drei oben genannten Gruppen (Web Apps, hybride Apps, self-contained Apps) zugeordnet. Die Klassifizierung ergibt sich dabei jeweils aus der Architektur der Tools.
+Anschließend wird aus jeder Gruppe ein Repräsentant ausgewählt und anhand der Kriterien des zugrundeliegenden Papers untersucht und bewertet. Der Rahmen dieser Arbeit beschränkt sich dabei auf die 7 Entwicklerkriterien.
+Neben Experteninterviews und Eigenrecherche sollen in die Bewertung der Tools zusätzlich Erkenntnisse einfließen, die beim Entwickeln einer rudimentären To-Do Listen App mit jeder der drei Technologien gewonnen werden.
+Abschließend werden die Ergebnisse ausgewertet und tabellarisch gegenübergestellt, um die Stärken und Schwächen der jeweiligen Lösung aufzuzeigen und so Entwickler bei der Wahl einer passenden Technologie zu unterstützen.
 
 \section*{Vorläufige Gliederung}
 
